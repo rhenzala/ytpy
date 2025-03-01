@@ -5,7 +5,7 @@ Youtube video downloader using Python
 1. Clone the repo
 ```
 git clone git@github.com:rhenzala/ytpy.git
-cd ytpyt
+cd ytpy
 ```
 2. Install the dependencies
 3. Run the following command
