@@ -29,3 +29,19 @@ def download_media(video_url, media_type):
         print(f"Download completed! Saved to {output_folder}")
     except Exception as e:
         print(f"An error occurred: {e}")
+
+if __name__ == "__main__":
+    if len(sys.argv) < 3:
+        print("Usage: python3 ytpy.py -vi/-au \"<YouTube_URL>\"")
+        sys.exit(1)
+
+    flag = sys.argv[1]
+    video_url = sys.argv[2]
+
+    if flag == "-vi":
+        download_media(video_url, "video")
+    elif flag == "-au":
+        download_media(video_url, "audio")
+    else:
+        print("Invalid flag! Use -vi for video or -au for audio.")
+        sys.exit(1)
